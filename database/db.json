@@ -1,0 +1,28 @@
+{
+    "products" : [
+        {
+            "id" : 1,
+            "title" : "product 1",
+            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis laboriosam voluptatum accusamus voluptatibus culpa totam sequi aspernatur quia perspiciatis amet.",
+            "price" : 19.99
+        },
+        {
+            "id" : 2,
+            "title" : "product 2",
+            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis laboriosam voluptatum accusamus voluptatibus culpa totam sequi aspernatur quia perspiciatis amet.",
+            "price" : 300.2
+        },
+        {
+            "id" : 3,
+            "title" : "product 3",
+            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis laboriosam voluptatum accusamus voluptatibus culpa totam sequi aspernatur quia perspiciatis amet.",
+            "price" : 300.2
+        },
+        {
+            "id" : 4,
+            "title" : "product 4",
+            "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis laboriosam voluptatum accusamus voluptatibus culpa totam sequi aspernatur quia perspiciatis amet.",
+            "price" : 300.2
+        }
+    ]
+}
