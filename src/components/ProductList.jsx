@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react'
 import {useDispatch, useSelector} from 'react-redux';
-import { fetchProducts } from '../features/products/productSlice';
+import { deleteProduct, fetchProducts } from '../features/products/productSlice';
 import './style.css'
 
 const ProductList = () => {
@@ -22,7 +22,9 @@ const ProductList = () => {
                         return <div key={product.id} className='product'>
                             <h3>{product.title}</h3>
                             <p>{product.description}</p>
-                            <strong>{product.price}</strong>
+                            <strong>Category :{product.category}</strong> <br /> <br />
+                            <strong>Price :{product.price}</strong> <br /> <br />
+                            <button onClick={() => dispatch(deleteProduct(product.id))}>Delete</button>
                         </div>
                     })
             }
