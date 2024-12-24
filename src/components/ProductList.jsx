@@ -3,13 +3,17 @@ import {useDispatch, useSelector} from 'react-redux';
 import { deleteProduct, fetchProducts } from '../features/products/productSlice';
 import './style.css'
 
-const ProductList = () => {
+const ProductList = ({onHandleSetProductToEdit}) => {
     const {products, isLoading, error} = useSelector(state =>state.productR);
     console.log(products)
     const dispatch = useDispatch();
     useEffect(() =>{
         dispatch(fetchProducts());
     },[dispatch]);
+
+    const handleEdit = (product) =>{
+        onHandleSetProductToEdit(product);
+    }
 
   return (
     <div>
@@ -25,6 +29,7 @@ const ProductList = () => {
                             <strong>Category :{product.category}</strong> <br /> <br />
                             <strong>Price :{product.price}</strong> <br /> <br />
                             <button onClick={() => dispatch(deleteProduct(product.id))}>Delete</button>
+                            <button onClick={() => handleEdit(product)}>Edit</button>
                         </div>
                     })
             }

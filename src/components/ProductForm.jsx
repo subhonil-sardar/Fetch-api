@@ -1,15 +1,30 @@
 import React, { useState } from 'react'
 import { nanoid } from 'nanoid';
 import {useDispatch} from 'react-redux'
-import { createProduct } from '../features/products/productSlice';
-const ProductForm = () => {
+import { useEffect } from 'react';
+import { createProduct, updateProduct } from '../features/products/productSlice';
+const ProductForm = ({productToEdit ={}, isEdit=false}) => {
     const dispatch = useDispatch();
     const [product, setProduct] = useState({
-        title : "",
-        description : "",
+        title :  "",
+        description :  "",
         price : "",
-        category : "",
+        category :  "",
     });
+    
+    useEffect(() => {
+        if(productToEdit){
+            setProduct(
+                {
+                    title :  productToEdit.title ?? '',
+                    description : productToEdit.description ?? '',
+                    price : productToEdit.price ?? '',
+                    category : productToEdit.category ?? '',
+                }
+            )
+        }
+    }, [productToEdit]);
+
     const handleChange = (e) =>{
         setProduct({
             ...product,
@@ -19,7 +34,11 @@ const ProductForm = () => {
 
     const handleSubmit = (event) =>{
         event.preventDefault();
-        dispatch(createProduct({...product, id: nanoid()}))
+        if(isEdit){
+            dispatch(updateProduct({id : productToEdit.id, product: product}));
+        }else{
+            dispatch(createProduct({...product, id: nanoid()}));
+        }
     }
   return (
     <div>
@@ -42,7 +61,7 @@ const ProductForm = () => {
             </div>
             <div>
                 <button type='submit'>
-                    Add Product
+                    {isEdit ? "Update Product" : "Add Product"}
                 </button>
             </div>
         </form>
