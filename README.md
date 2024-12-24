@@ -29,17 +29,26 @@
     - Press enter
     
 * Stape 2 : 
-    - Type your terminal ( npm run dev & press enter) click the url ( http://localhost:5173/ )
+    - Type your terminal =>
+
+  ```js
+
+    npm run dev 
+
+  ```
+    - Press enter
+
+    click the url ( http://localhost:5173/ )
 
     [<b>Disclaimer : If you don't run the json server and run the frontend server first, then you won't see any output in the frontend except the from</b>]
 
 ---
 
 ## DEPENDEND ON
-* Redux toolkit (for fatch api) 
+* Redux toolkit ( for fatch api ) 
 * React redux ( for use redux toolkit ) 
-* Axios (for fatch api)
-* JSON server (for create api ) 
+* Axios ( for fatch api )
+* JSON server ( for create api ) 
 * Nanoid (for create id autometicly ) 
 
   ```js
