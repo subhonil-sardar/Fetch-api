@@ -27,6 +27,13 @@
       "price": "70",
       "category": "beauty",
       "id": "tA6xDwXudwBUFLL8vzIU1"
+    },
+    {
+      "id": "FQ98tvnVoO7l9aGoa3EN6",
+      "title": "product 5",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis laboriosam voluptatum accusamus voluptatibus culpa totam sequi aspernatur quia perspiciatis amet.",
+      "price": "678",
+      "category": "beauty"
     }
   ]
 }
